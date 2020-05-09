@@ -1,2 +1,7 @@
 server:
   port: 80
+
+payment:
+  paymentService: http://localhost:8001
+  saveUrl: /payment/save
+  getPaymentByIdUrl: /payment/getPaymentById
