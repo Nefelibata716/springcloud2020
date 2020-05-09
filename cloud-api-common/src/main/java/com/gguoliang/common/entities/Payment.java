@@ -1,8 +1,10 @@
-package com.gguoliang.springcloud.entities;
+package com.gguoliang.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * @Author GGuoLiang
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment {
+public class Payment implements Serializable {
     private Long id;
     private String serial;
 }

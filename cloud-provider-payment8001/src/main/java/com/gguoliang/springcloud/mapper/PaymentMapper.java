@@ -1,6 +1,7 @@
 package com.gguoliang.springcloud.mapper;
 
-import com.gguoliang.springcloud.entities.Payment;
+
+import com.gguoliang.common.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

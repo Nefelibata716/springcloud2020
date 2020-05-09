@@ -1,7 +1,8 @@
 package com.gguoliang.springcloud.controller;
 
-import com.gguoliang.springcloud.entities.CommonResult;
-import com.gguoliang.springcloud.entities.Payment;
+
+import com.gguoliang.common.entities.CommonResult;
+import com.gguoliang.common.entities.Payment;
 import com.gguoliang.springcloud.service.PaymentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +26,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping(value = "/payment/save")
-    public CommonResult save(@RequestBody  Payment payment){
+    public CommonResult save(@RequestBody Payment payment){
         int save = paymentService.save(payment);
         logger.info("增加的参数{}",payment.toString());
         if(save > 0){

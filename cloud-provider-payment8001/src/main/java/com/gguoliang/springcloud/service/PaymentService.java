@@ -1,6 +1,7 @@
 package com.gguoliang.springcloud.service;
 
-import com.gguoliang.springcloud.entities.Payment;
+
+import com.gguoliang.common.entities.Payment;
 
 /**
  * @Author GGuoLiang

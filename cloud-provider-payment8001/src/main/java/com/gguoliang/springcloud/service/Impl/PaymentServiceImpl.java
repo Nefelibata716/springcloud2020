@@ -1,6 +1,7 @@
 package com.gguoliang.springcloud.service.Impl;
 
-import com.gguoliang.springcloud.entities.Payment;
+
+import com.gguoliang.common.entities.Payment;
 import com.gguoliang.springcloud.mapper.PaymentMapper;
 import com.gguoliang.springcloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
