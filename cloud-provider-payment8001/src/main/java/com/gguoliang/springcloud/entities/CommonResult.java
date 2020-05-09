@@ -8,6 +8,7 @@ import lombok.Data;
  * @Version 1.0
  */
 @Data
+
 public class CommonResult<T> {
     private Integer code;
     private String message;
@@ -16,6 +17,11 @@ public class CommonResult<T> {
     public CommonResult(Integer code,String message){
         this.code = code;
         this.message = message;
+    }
+    public CommonResult(Integer code,String message,T data){
+        this.code = code;
+        this.message = message;
+        this.data = data;
     }
 
 

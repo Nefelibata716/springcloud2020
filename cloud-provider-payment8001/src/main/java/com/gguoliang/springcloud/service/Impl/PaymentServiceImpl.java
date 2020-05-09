@@ -23,7 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-    public Payment getPaymentById(int paymentId) {
+    public Payment getPaymentById(Long paymentId) {
         return paymentMapper.getPaymentById(paymentId);
     }
 }

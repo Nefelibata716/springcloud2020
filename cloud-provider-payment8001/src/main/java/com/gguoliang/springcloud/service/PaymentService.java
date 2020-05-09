@@ -22,5 +22,5 @@ public interface PaymentService {
      * @param paymentId
      * @return
      */
-    Payment getPaymentById(int paymentId);
+    Payment getPaymentById(Long paymentId);
 }
