@@ -1,7 +1,18 @@
 server:
   port: 80
 
+
 payment:
-  paymentService: http://localhost:8001
+  paymentService: http://CLOUD-PROVIDER-PAYMENT
   saveUrl: /payment/save
   getPaymentByIdUrl: /payment/getPaymentById
+spring:
+  application:
+    name: cloud-consumer-order
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://master:7002/eureka/,http://backup:7002/eureka/

@@ -4,19 +4,13 @@ package com.gguoliang.springcloud.controller;
 import com.gguoliang.common.entities.CommonResult;
 import com.gguoliang.common.entities.Payment;
 import com.gguoliang.springcloud.service.PaymentService;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @Author GGuoLiang
@@ -31,9 +25,6 @@ public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
-
-    @Autowired
-    private DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
     private String serverPort;
@@ -57,20 +48,6 @@ public class PaymentController {
         return new CommonResult(200,"成功,serverPort"+serverPort,payment);
     }
 
-
-    @GetMapping(value = "/payment/discovery")
-    public CommonResult discovery(){
-        List<String> services = discoveryClient.getServices();
-        for (String service : services) {
-            logger.info("发现的服务有{}",service);
-            List<ServiceInstance> instances = discoveryClient.getInstances(service);
-            for (ServiceInstance instance : instances) {
-                logger.info(instance.getServiceId()+"\t" + instance.getHost() +
-                        "\t" + instance.getPort() +"\t" + instance.getUri());
-            }
-        }
-        return new CommonResult(200,"成功",this.discoveryClient);
-    }
 
 
 }

@@ -1,22 +1,18 @@
-package com.gguoliang.order;
+package com.gguoliang.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author GGuoLiang
- * @Date 2020/5/9 11:53 下午
+ * @Date 2020/5/8 11:58 下午
  * @Version 1.0
  */
 @SpringBootApplication
-@Configuration
 @EnableEurekaClient
-public class OrderMain80 {
+public class PaymentMain8002 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain80.class,args);
+        SpringApplication.run(PaymentMain8002.class,args);
     }
-
-
 }
