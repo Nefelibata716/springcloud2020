@@ -32,3 +32,23 @@ cloud-provider-payment8004
 服务消费者
 cloud-consumerconsul-order80
 ```
+
+## 服务调用
+ribbon涉及模块
+```$xslt
+cloud-consumer-order80
+选择jar自带的负载规则
+创建自定义的bean组件MySelfRule
+启动主类添加注解
+@RibbonClient(name = "调用服务名称",configuration = MySelfRule.class)
+
+自定义负载算法实现
+com.gguoliang.order.lb
+```
+Openfeign涉及模块
+```$xslt
+cloud-consumerfeign-order80
+接口和注解服务调用
+超时时间控制 默认时间是1秒
+feign日志级别打印
+```

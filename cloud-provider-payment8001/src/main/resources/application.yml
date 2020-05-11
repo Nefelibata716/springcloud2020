@@ -23,7 +23,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://master:7002/eureka/,http://backup:7002/eureka/
+      defaultZone: http://master:7001/eureka/
   instance:
     instance-id: payment8001
     prefer-ip-address: true

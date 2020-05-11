@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author GGuoLiang
@@ -75,6 +77,16 @@ public class PaymentController {
     @GetMapping(value = "/payment/getPaymentLB")
     public CommonResult getPaymentLB(){
         return new CommonResult(200,"成功",serverPort);
+    }
+
+    @GetMapping(value = "/payment/getPaymentFeign")
+    public CommonResult getPaymentFeign(){
+        try {
+            TimeUnit.SECONDS.sleep(6);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return new CommonResult(200,"成功，serverPort ="+serverPort, UUID.randomUUID());
     }
 
 

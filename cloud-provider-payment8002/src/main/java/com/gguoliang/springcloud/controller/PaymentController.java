@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 /**
  * @Author GGuoLiang
  * @Date 2020/5/9 9:34 上午
@@ -55,4 +57,8 @@ public class PaymentController {
     }
 
 
+    @GetMapping(value = "/payment/getPaymentFeign")
+    public CommonResult getPaymentFeign(){
+        return new CommonResult(200,"成功，serverPort ="+serverPort, UUID.randomUUID());
+    }
 }
