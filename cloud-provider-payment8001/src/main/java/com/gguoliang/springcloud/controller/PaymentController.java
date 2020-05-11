@@ -72,5 +72,10 @@ public class PaymentController {
         return new CommonResult(200,"成功",this.discoveryClient);
     }
 
+    @GetMapping(value = "/payment/getPaymentLB")
+    public CommonResult getPaymentLB(){
+        return new CommonResult(200,"成功",serverPort);
+    }
+
 
 }
