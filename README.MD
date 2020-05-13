@@ -66,3 +66,7 @@ cloud-provider-hystrix-payment8001
 生产者
 cloud-provider-hystrix-payment8001
 ```
+HystrixDashboard
+```$xslt
+cloud-provider-hystrix-payment8001
+```
