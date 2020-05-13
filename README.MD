@@ -52,3 +52,17 @@ cloud-consumerfeign-order80
 超时时间控制 默认时间是1秒
 feign日志级别打印
 ```
+
+##服务降级、熔断、限流
+Hystrix涉及模块
+```$xslt
+服务降级
+消费者
+cloud-consumer-feign-hystrix-order80
+生产者
+cloud-provider-hystrix-payment8001
+
+服务熔断
+生产者
+cloud-provider-hystrix-payment8001
+```
