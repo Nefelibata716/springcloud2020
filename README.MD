@@ -70,3 +70,17 @@ HystrixDashboard
 ```$xslt
 cloud-provider-hystrix-payment8001
 ```
+Gateway涉及模块
+```$xslt
+cloud-gateway-gateway9527
+主要涉及路由route 断言predicates 和过滤器 filter
+俩种路由方式，断言正则匹配和自定义过滤器
+```
+config和bus消息总线涉及模块
+```$xslt
+服务总线
+cloud-config-center3344
+服务分支
+cloud-config-client3355
+cloud-config-client3366
+```
