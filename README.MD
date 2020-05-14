@@ -86,5 +86,11 @@ cloud-config-client3366
 ```
 Stream涉及模块
 ```$xslt
+消息提供者
+cloud-stream-rabbitmq-provider8801
+消息消费者
+cloud-stream-rabbitmq-consumer8803
+cloud-stream-rabbitmq-consumer8802
+消息重复问题和持久化问题
 
 ```
