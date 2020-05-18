@@ -94,3 +94,13 @@ cloud-stream-rabbitmq-consumer8802
 消息重复问题和持久化问题
 
 ```
+
+##spring cloud alibaba
+###Nacos服务注册中心
+```$xslt
+服务提供者
+cloudalibaba-provider-payment9001
+cloudalibaba-provider-payment9002
+服务消费者
+cloudalibaba-consumer-nacos-order83
+```
